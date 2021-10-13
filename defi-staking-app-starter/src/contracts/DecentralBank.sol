@@ -1,8 +1,18 @@
 // pragma solidity >=0.7.0 <0.9.0;
 pragma solidity ^0.5.7;
 
+import "./RWD.sol";
+import "./Tether.sol";
+
 contract DecentralBank {
+  string public name = "DecentralBank";
   address public owner;
-  uint public last_completed_migration;
+  Tether public tether;
+  RWD public rwd;
+
+  constructor (RWD _rwd, Tether _tether) public {
+      rwd = _rwd;
+      tether = _tether;
+  }
 
 }
