@@ -1,5 +1,5 @@
-pragma solidity >=0.7.0 <0.9.0;
-// pragma solidity ^0.5.7;
+// pragma solidity >=0.7.0 <0.9.0;
+pragma solidity ^0.5.7;
 
 contract RWD {
     string  public name = "Reward Token";
@@ -22,7 +22,7 @@ contract RWD {
     mapping (address => uint) public balanceOf;
     mapping (address => mapping (address => uint)) public allowance;
 
-    constructor (){
+    constructor () public {
         balanceOf[msg.sender] = totalSupply;
     }
 
